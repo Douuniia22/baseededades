@@ -57,7 +57,7 @@ create table empleats (
 
 
 create table ordinaris (
-  num_pass int(20),
+  num_pass varchar(20),
   constraint pk_ordinaris primary key (num_pass),
   constraint fk_ordinaris foreign key (num_pass) references empleats(num_pass)
 ) engine=innodb;
