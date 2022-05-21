@@ -5,11 +5,11 @@
 -- exemple actualitzat per a obligar a treballar amb taules INNODB
 
  
-drop database vers;
+drop database creaBD;
 
-create database vers;
+create database creaBD;
 
-use vers;
+use creaBD;
 
 create table paisos (
   nom char(20),
@@ -92,4 +92,4 @@ create table assignacions (
 
 alter table zones_biocontencio ADD CONSTRAINT fk_zones_biocontencio_toqualificats foreign key (responsable) references qualificats(num_pass);
 
-source vers1.sql;
+source insertaBD.sql;
