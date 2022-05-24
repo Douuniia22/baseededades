@@ -5,3 +5,4 @@ where num_pass in(select empl_ord
 				 where zona not in (select codi
 									from zones_biocontencio
 									where nivell = 'A'));
+source apartat2.sql;
