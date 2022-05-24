@@ -5,3 +5,5 @@ where codi in (select codiLab
 				  from zones_biocontencio
 				  where nivell = 'A')
 order by nom asc;
+
+source apartat2.sql;
