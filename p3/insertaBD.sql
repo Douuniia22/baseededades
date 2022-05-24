@@ -88,4 +88,4 @@ insert into assignacions(fecha1, empl_ord, zona, Lab, data_fi)
 						('2001-04-04', '1178978J', 8238428, 12346, '2018-12-01'),
 						('2003-02-21', '9082394J', 8238428, 12346, '2021-06-01');
 
--- source consultes.sql;
+source apartat1.sql; 
