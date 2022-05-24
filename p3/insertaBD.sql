@@ -69,6 +69,7 @@ insert into qualificats (num_pass, titulacio, zona_assignada, lab)
 						('4728947H', 'Quimica', 8837436, 12292);
 
 SET FOREIGN_KEY_CHECKS=1;
+update qualificats set zona_assignada = '2857827' where num_pass = '9848283L'; -- estem assignant un responsable a una zona
 
 insert into armes_biologiques (nom, fecha, potencial, zona, lab)
 				values  ('LANO', '2001-05-20', 10, 2857827, 12345),
