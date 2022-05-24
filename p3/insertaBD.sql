@@ -10,12 +10,13 @@ insert into paisos (nom, pot_desenv, tractat_signat)
 
 
 insert into laboratoris (codi, nom, pais) 
-				values  (12345, 'Lab phi', 'ESPANYA'),
+				values  (12345, 'Lab phi', 'FILIPINAS'),
 						(12346, 'Lab jun', 'FRANCA'),
 						(12347, 'Lab neu', 'ANGLATERRA'),
 						(12348, 'Lab viw', 'IRLANDA'),
 						(12349, 'Lab uni', 'BELGICA'),
-						(12343, 'Lab fp', 'ARGENTINA');
+						(12343, 'Lab fp', 'ARGENTINA'),
+						(12344, 'BCN-XXX', 'ESPANYA');
 				
 
 insert into empleats (num_pass, nom) 
@@ -45,7 +46,11 @@ insert into ordinaris (num_pass)
 						('9082394J'),
 						('0923484L'),
 						('1178978J'),
-						('6389423F');
+						('6389423F'),
+						('9876543A'),
+						('9876543B'),
+						('9876543C'),
+						('9876543D');
 						
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -54,7 +59,8 @@ insert into zones_biocontencio (codi, codiLab, nivell, responsable)
 						(8837436, 12292, 'M', '7841747G'),
 						(4827487, 12349, 'A', '4828974F'),
 						(8238428, 12346, 'M', '9848283L'),
-						(2849272, 12292, 'B', '8492498L');
+						(2849272, 12292, 'B', '8492498L'),
+						(9876543, 12344, 'M', '9876543B');
 						
 insert into qualificats (num_pass, titulacio, zona_assignada, lab)
 				values  ('7109378U', 'Enginyeria quimica', 2857827, 12345),
@@ -68,7 +74,6 @@ insert into qualificats (num_pass, titulacio, zona_assignada, lab)
 						('4728947H', 'Quimica', 8837436, 12292);
 
 SET FOREIGN_KEY_CHECKS=1;
-update qualificats set zona_assignada = '2857827' where num_pass = '9848283L'; -- estem assignant un responsable a una zona
 
 insert into armes_biologiques (nom, fecha, potencial, zona, lab)
 				values  ('LANO', '2001-05-20', 10, 2857827, 12345),
@@ -84,7 +89,11 @@ insert into assignacions(fecha1, empl_ord, zona, Lab, data_fi)
 						('2010-09-13', '3953904R', 8837436, 12292, '2020-01-02'),
 						('2002-09-30', '6389423F', 8238428, 12346, '2017-11-11'),
 						('2014-01-20', '6389423F', 2849272, 12292, '2016-01-01'),
-						('2001-04-04', '1178978J', 8238428, 12346, '2018-12-01'),
-						('2003-02-21', '9082394J', 8238428, 12346, '2021-06-01');
+						('2001-04-04', '1178978J', 9876543, 12346, '2018-12-01'),
+						('2003-02-20', '9876543A', 9876543, 12344, '2021-06-01'),
+						('2000-02-21', '9876543B', 9876543, 12344, '2021-05-01'),
+						('2001-02-21', '9876543C', 9876543, 12344, '2021-04-01'),
+						('2002-02-10', '9876543D', 9876543, 12344, '2021-03-01');
+						
 
-source apartat1.sql; 
+source apartat1.sql;
