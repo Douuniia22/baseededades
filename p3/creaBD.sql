@@ -5,7 +5,7 @@
 -- exemple actualitzat per a obligar a treballar amb taules INNODB
 
  
-drop database creaBD;
+drop database if exists creaBD;
 
 create database creaBD;
 
