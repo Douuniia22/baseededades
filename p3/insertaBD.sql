@@ -15,8 +15,7 @@ insert into laboratoris (codi, nom, pais)
 						(12347, 'Lab neu', 'ANGLATERRA'),
 						(12348, 'Lab viw', 'IRLANDA'),
 						(12349, 'Lab uni', 'BELGICA'),
-						(12343, 'Lab fp', 'ARGENTINA'),
-						(12292, 'BCN-ARBRE', 'ESPANYA');
+						(12343, 'Lab fp', 'ARGENTINA');
 				
 
 insert into empleats (num_pass, nom) 
