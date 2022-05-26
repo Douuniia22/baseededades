@@ -1,11 +1,14 @@
 -- script per a la tercera consulta
--- Obtenir quines zones tenen més de 3 empleats qualificats. Concretament es
+-- Obtenir quines zones tenen mÃ©s de 3 empleats qualificats. Concretament es
 -- demana el codi de la zona conjuntament amb el nom del laboratori, ordenat per
 -- laboratori i zona
 
 
-select zona_assignada, lab
-from qualificats
-order by lab, zona_assignada;
+select nom, zona_assignada
+from laboratoris, qualificats
+where codi = lab
+group by zona_assignada
+having (count(zona_assignada) > 3);
+
 
 source apartat4.sql;
