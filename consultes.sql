@@ -16,22 +16,12 @@ where num_pass in(select empl_ord
 									
 --3
 
---select nom, zona_assignada 
---from laboratoris, qualificats 
---where codi in (select lab, zona_assignada, COUNT(zona_assignada)
---from qualificats
---group by zona_assignada
---having (COUNT(zona_assignada > 3)));
+select nom, zona_assignada
+from laboratoris, qualificats
+where codi = lab
+group by zona_assignada
+having (count(zona_assignada) > 3);
 
---select nom, zona_assignada
---from laboratoris, qualificats
---where zona_assignada in(select COUNT(zona_assignada)
---from qualificats
---group by num_pass
---having  COUNT(zona_assignada>3));
-
-
---COUNT(zona_assignada) from qualificats;
 --4
 select num_pass from ordinaris
 where num_pass in(select empl_ord 
@@ -40,7 +30,22 @@ where num_pass in(select empl_ord
 						from laboratoris
 						where nom = 'BCN-ARBRE'));
 						
---6
+
+    
+--5
+
+select  nom, num_pass
+from assignacions, empleats
+where num_pass=empl_ord
+group by empl_ord
+having COUNT(empl_ord)> (select COUNT(empl_ord)
+						from assignacions, empleats 
+						where nom= "Jordi Guasch" and num_pass=empl_ord
+						group by empl_ord
+						having (count(empl_ord)));
+
+					
+					--6
 select num_pass, zona_assignada from qualificats
 UNION
 select empl_ord, zona from assignacions;
